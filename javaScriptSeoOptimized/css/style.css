@@ -1,0 +1,1157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+html{
+	scroll-behavior: smooth;
+}
+body{
+	margin:0;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	box-sizing:border-box;
+	margin:0;
+}
+.kontejner{
+	max-width: 1140px;
+	margin:auto;
+}
+.kolona{
+	display:flex;
+	flex-wrap:wrap;
+}
+.naslovSekcije{
+	flex:0 0 100%;
+	max-width: 100%;
+	margin-bottom: 40px;
+}
+.naslovSekcije h1{
+	display: inline-block;
+	font-size: 35px;
+	text-transform: uppercase;
+	font-weight: 700px;
+	margin:0 0  5px;
+	color:black;
+	position:relative;
+	
+}
+.naslovSekcije h1::before{
+	content: '';
+	left:0;
+	position: absolute;
+	height: 2px;
+	right:0px;
+	background-color: orange;
+	bottom: 0px;
+
+}
+.text-center{
+	text-align:center!important;
+}
+.text-left{
+	text-align:left!important;
+}
+.text-right{
+	text-align:right!important;
+}
+/*Heder*/
+header{
+	position: absolute;
+	left:0px;
+	right:0px;
+	border-bottom: 1px solid #ffffff;
+	z-index: 11;
+}
+header.fixed{
+	background-color: #ffffff;
+	position: fixed;
+	border-color: #eeeeee;
+	animation: fixHeader 1s ease;
+	z-index: 11;
+}
+@keyframes fixHeader{
+	0%{
+		transform: translateY(-100%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+
+}
+header .kolona{
+	justify-content: space-between;
+	align-items: center;
+}
+header .ime a{
+	text-decoration: none;
+	font-size: 22px;
+	font-weight: 600;
+	color: #ffffff;
+	text-transform: uppercase;
+	position: relative;
+}
+header.fixed .ime a{
+	color: #000000;
+}
+
+header .navigacija{
+	
+}
+header .navigacija ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+}
+header .navigacija ul li{
+	display: inline-block;
+	margin-left: 35px;
+
+}
+header .navigacija ul li a{
+	font-size: 15px;
+	text-decoration: none;
+	line-height: 72px;
+	display: block;
+	color: #ffffff;
+	font-weight: 600;
+	position:relative;
+}
+header.fixed .navigacija ul li a{
+	color: #000000;
+
+}
+header .navigacija ul li a::before{
+	content: '';
+	height: 3px;
+	background-color: #ffffff;
+	width: 0%;
+	position: absolute;
+	right:0px;
+	bottom: -1px;	
+	transition: all .5s ease;
+ }
+ header.fixed .navigacija ul li a::before{
+ 	background-color: #febd01;
+
+ }
+ header .navigacija ul li a:hover::before{
+ 	width: 100%;
+ 	left:0;
+ }
+ header .navigacija ul li a.aktivna::before{
+ 	width: 100%;
+ 	left:0;
+ }
+ /*Pocetna sekcija*/
+.pocetna{
+	min-height: 100vh;
+	background-image: url(../css/image/pozadina.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 15px;
+}
+.pocetna .full-screen{
+	
+	min-height: 100vh;
+}
+.pocetna .pocetna-sadrzaj{
+	
+	flex:0 0 100%;
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.pocetna .pocetna-sadrzaj .blok{
+	
+	flex:0 0 75%;
+	max-width: 75%;
+	padding-left: 35px;
+	border-left: 5px solid #ffffff;
+	shape-margin: 50px;
+
+}
+.pocetna .pocetna-sadrzaj .blok h6{
+	color:#ffffff;
+	font-size:18px;
+	font-weight: 500;
+	margin:0;
+	padding: 0;
+	
+}
+.pocetna .pocetna-sadrzaj .blok h1{
+	color:#ffffff;
+	font-size:70px;
+	font-weight: 600;
+	margin:0;
+	padding:0;
+	
+	
+}
+.pocetna .pocetna-sadrzaj .blok h3{
+		color:#ffffff;
+	font-size:25px;
+	font-weight: 500;
+	margin:0;
+	padding: 0;
+}
+.pocetna .pocetna-sadrzaj .blok  .dugmecv {
+	padding-top: 20px;
+}
+.pocetna .pocetna-sadrzaj .blok  .dugmecv a{
+	border-radius: 4px;
+	color:#ffffff;
+	border:1px solid #ffffff;
+	padding:12px 25px;
+	text-decoration: none;
+	display:inline-block;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 600;
+	transition: all .5s ease;
+	background-color: transparent;
+
+}
+.pocetna .pocetna-sadrzaj .blok  .dugmecv a:hover{
+	background-color: #ffffff;
+	color:#000000;
+
+}
+/*O meni*/
+.oMeni{
+	padding: 100px 15px;
+	background-color: #ffffff;
+}
+.oMeni .naslovSekcije{
+	text-align: center;
+	margin-bottom: 35px;
+}
+
+.text-uppercase{
+	text-transform: uppercase!important;
+}
+.oMeni .naslovSekcije p.malaSlova{
+	display: block;
+	font-size: 14px;
+	color:grey;
+	font-weight:400; 
+	letter-spacing: 2px;
+
+
+}
+
+.oMeni .sadrzaj .slika{
+	flex:0 0 33.33%;
+	max-width: 33.33%;
+}
+.oMeni .sadrzaj .slika img{
+	width: 100%;
+	display: block;
+
+}
+.oMeni .sadrzaj .tekst{
+	
+	flex: 0 0 66.66%;
+	max-width: 66.66%;
+	padding-left: 30px;
+}
+.oMeni .sadrzaj .tekst h4{
+	font-size: 25px;
+	font-weight: 600;
+	margin: 0 0 5px;
+	color:black;
+
+}
+.oMeni .sadrzaj .tekst h6{
+	font-size: 18px;
+	font-weight: 500;
+	margin: 0 0 10px;
+	color:black;
+
+}
+.oMeni .sadrzaj .tekst p{
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	color:#838383;
+	margin:0 5px 20px;
+
+}
+.oMeni .sadrzaj .tekst .informacije{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.oMeni .sadrzaj .tekst .informacije .lista{
+	flex:0 0 calc(50% - 15px);
+	max-width: calc(50% - 15px);
+	margin-top: 10px;
+	display: flex;
+	flex: wrap;
+	border-bottom: 1px solid lightgrey;
+	padding-bottom: 10px;
+
+}
+.oMeni .sadrzaj .tekst .informacije .lista{
+	padding-right: 10px;
+	color: #000000;
+	font-weight: 600;
+	font-size: 15px;
+}
+.oMeni .sadrzaj .tekst .informacije .lista p{
+    margin:0;
+}
+.oMeni .sadrzaj .tekst .ikonice{
+	
+	padding-top: 30px;
+}
+.oMeni .sadrzaj .tekst .ikonice a{
+	height: 30px;
+	width: 30px;
+	background-color: #000000;
+	border-radius: 3px;
+	display: inline-block;
+	border: 1px solid #000000;
+	text-align: center;
+	margin: 0 1px;
+	-webkit-transition:  all .5s ease;
+	transition:  all .5s ease;
+
+}
+.oMeni .sadrzaj .tekst .ikonice a:hover{
+	background-color: transparent;
+}
+
+.oMeni .sadrzaj .tekst .ikonice a .fa{
+	color:#ffffff;
+	-webkit-transition:  all .5s ease;
+	transition:  all .5s ease;
+}
+.oMeni .sadrzaj .tekst .ikonice a:hover .fa{
+	color: #000000;
+	
+}
+/*Services*/
+.Usluge{
+	background-color: #f5f8fd;
+	padding: 100px 15px 70px;
+
+}
+.Usluge .naslovSekcije h1::before{
+
+}
+.Usluge .usluge-sadrzaj{
+	
+	flex:0 0 100%;
+	max-width: 100%;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+
+
+}
+.Usluge .usluge-sadrzaj .boks{
+	background-color:#ffffff;
+	flex:0 0 calc(33.33% - 20px);
+	max-width:calc(33.33% - 20px);
+	margin-bottom: 30px;
+	border: 1px soilid #eeeeee;
+	padding:30px;
+	text-align: center;
+	position: relative;
+	border-radius: 5px;
+
+}
+.Usluge .usluge-sadrzaj .boks::before{
+	content:'';
+	height: 2px;
+	background-color: #febd01;
+	position: absolute;
+	bottom: 0px;
+	width:50px;
+	left:0;
+	right: 0;
+	margin:auto;
+	transition: all .5s ease;
+
+}
+.Usluge .usluge-sadrzaj .boks:hover::before{
+	width: 100%;
+	
+}
+.Usluge .usluge-sadrzaj .boks .nalepnica{
+height: 60px;
+width: 60px;
+background-color: #febd01;
+margin:15px auto 20px;
+border-radius: 50%;
+text-align: center;
+
+}
+.Usluge .usluge-sadrzaj .boks .nalepnica .fa{
+	font-size: 25px;
+	color:#ffffff;
+	line-height: 60px;
+
+}
+.Usluge .usluge-sadrzaj .boks h5{
+	font-size: 16px;
+	font-weight: 600;
+	color: #000000;
+	margin:0;
+}
+.Usluge .usluge-sadrzaj .boks p{
+    font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	color:#838383;
+	margin:10px 0 15px;
+}
+/*vestine*/
+.vestine{
+	padding: 150px 20px;
+	background-color: #ffffff;
+
+}
+
+.vestine .vestine-sadrzaj{
+	flex:0 0 50%;
+	max-width: 50%
+	padding-right:40px;
+	
+}
+.vestine .vestine-sadrzaj .naslovSekcije p{
+    font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	color:#838383;
+	margin:15px 0 20px;
+}
+.vestine .slika{
+	flex:0 0 50%;
+	max-width: 50%
+}
+.vestine .slika img{
+	width:100%;
+	display: block;
+	
+}
+.align-items-center{
+	align-items: center;
+}
+
+.vestine .vestine-sadrzaj .vestine-boks{
+	
+	flex: 0 0 100%;
+	max-width: 100%;
+	margin-bottom: 30px;
+	
+
+}
+.vestine .vestine-sadrzaj .vestine-boks h6{
+	font-size: 16px;
+	font-weight: 500;
+	color:#000000;
+	margin:0 0 8px;
+}
+.vestine .vestine-sadrzaj .vestine-boks .vestine-bar{
+	height: 6px;
+	background-color: #eeeeee;
+	position: relative;
+}
+.vestine .vestine-sadrzaj .vestine-boks .vestine-bar-in{
+	background-color: #febd01;
+	position: absolute;
+	left:0;
+	top:0;
+	height: 100%;
+}
+.vestine .vestine-sadrzaj .vestine-boks .vestine-bar-in span{
+	color:#838383;
+	font-size: 16px;
+	font-weight: 400;
+	position: absolute;
+	right:0px;
+	top:-30px;
+}
+/*Portfolio*/
+.portfolio{
+	background-color: #f5f8fd;
+	padding: 100px 7px;
+}
+.portfolio .filter-buttons{
+	
+	flex: 0 0 100%;
+	max-width: 100%;
+
+}
+.portfolio .filter-buttons ul{
+	list-style: none;
+	text-align: center;
+	padding: 0;
+	
+
+}
+.portfolio .filter-buttons ul li{
+	color: #000000;
+	font-size:16px;
+	font-weight: 500;
+	display: inline-block;
+	margin:0px 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding-bottom: 0;
+}
+.portfolio .filter-buttons ul li.aktivan{
+	color: #febd01;
+	border-bottom:2px solid #febd01;
+}
+.portfolio .filter-buttons{
+	margin-bottom: 25px;
+}
+.portfolio .porfolio-galerija{
+	flex:0 0 100%;
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	
+	
+
+}
+.portfolio .porfolio-galerija .item{
+	flex:0 0 33.33%;
+	max-width:33.33% ;
+	position: relative;
+	padding: 8px;
+
+}
+.portfolio .porfolio-galerija .item .inner{
+	position: relative;
+
+}
+.portfolio .porfolio-galerija .item img{
+	width: 100%;
+	display: block;
+}
+.portfolio .porfolio-galerija .item .overlay{
+position: absolute;
+left:0;
+bottom:0;
+top:0;
+right: 0;
+background-color: rgba(0,0,0,0.6);
+z-index: 10;
+display: flex;
+flex-wrap: nowrap;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+opacity: 0;
+transition: all .5s ease;
+}
+.portfolio .porfolio-galerija .item:hover .overlay{
+	opacity: 1;
+
+}
+.portfolio .porfolio-galerija .item .overlay .fa{
+	height: 50px;
+	width: 50px;
+	background-color: #febd01;
+	color: #ffffff;
+	display: inline-block;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 50%;
+	
+
+}
+.portfolio .porfolio-galerija .item:hover .overlay .fa{
+-webkit-animation: gallerIcon .8s ease;
+animation: gallerIcon .8s ease;
+cursor: pointer;
+
+
+}
+@keyframes gallerIcon{
+	0%{
+		transform: translateY(-20px);opacity: 0;
+	}
+	100%{
+		transform: translateY(0);opacity: 1;
+	}
+
+
+}
+.portfolio .porfolio-galerija .item .overlay h4{
+	margin-top: 15px;
+	font-size: 25px;
+	color:#ffffff;
+	font-weight: 600;
+	cursor:default;
+	
+	
+}
+.portfolio .porfolio-galerija .item:hover .overlay h4{
+	-webkit-animation: gallerText .8s ease;
+	animation: gallerText .8s ease;
+
+
+}
+@keyframes gallerText{
+	0%{
+		transform: translateY(20px);opacity: 0;
+	}
+	100%{
+		transform: translateY(0);opacity: 1;
+	}
+}
+/*lightboc*/
+.lightbox{
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	z-index:100;
+	background-color: rgb(0,0,0,0.6);
+	justify-content:center;
+	align-items:center;
+}
+.lightbox.show{
+	display: flex;
+
+}
+.lightbox.hide{
+	display: none;
+
+}
+
+.lightbox .close-lightbox{
+	height: 35px;
+	width: 35px;
+	background-color: #ffffff;
+	color: #febd01;
+	text-align: center;
+	line-height: 35px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+	border-radius: 50%;
+	z-index: 101;
+
+}
+.lightbox img{
+	max-width: 100%;
+	max-height: 80%;
+	display: block;
+}
+/*message*/
+.message-text{
+	background-color:#0c0c17;
+	padding: 40px 15px;
+}
+.message-text .text{
+	flex: 0 0 66.66%;
+	max-width: 66.66%;
+}
+.message-text .text h2{
+	font-size: 25px;
+    color: #ffffff;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height:35px;
+	}
+.message-text .dugmecv{
+	flex: 0 0 33.33%;
+	max-width: 33.33%;
+	text-align: right;
+	}
+.message-text .dugmecv a{
+    border-radius: 4px;
+	color:#ffffff;
+	border:1px solid #ffffff;
+	padding:12px 25px;
+	text-decoration: none;
+	display:inline-block;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 600;
+	transition: all .5s ease;
+	background-color: transparent;
+	}
+	.message-text .dugmecv a:hover{
+
+	background-color: #ffffff;
+	color:#000000;
+}
+/*testtimonials*/
+.testimonials{
+	padding: 100px 0px;
+	background-color: #f5f8fd;
+
+
+}
+.testimonials .testimonials-sadrzaj{
+	position: relative;
+	overflow: hidden;
+	flex: 0 0 100%;
+	max-width: 100%;
+
+}
+
+.testimonials .testimonials-sadrzaj .test-slider .slide{
+
+	background-color: #ffffff;
+	margin-bottom: 15px;
+	border: 1px solid #eeeeee;
+	padding: 40px 20px;
+	border-radius: 4px;
+	display: flex;
+	flex-wrap: nowrap;
+	float: left;
+	width: 100%;
+}
+.testimonials .testimonials-sadrzaj .test-slider{
+	float: left;
+	transition: margin 1s ease;
+}
+.testimonials .testimonials-sadrzaj .test-slider .slide .slika{
+	flex: 0 0 118px;
+	max-width: 128px;
+}
+.testimonials .testimonials-sadrzaj .test-slider .slide p{
+	 font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	color:#838383;
+	margin:0;
+
+}
+
+.testimonials .testimonials-sadrzaj .test-slider .slide h6{
+	font-size: 16px;
+	font-weight: 600;
+	color: #000000;
+	margin: 10px 0 5px;
+}
+
+.testimonials .testimonials-sadrzaj .slide-control{
+	float:left;
+	width: 100%;
+	text-align: center;
+
+}
+.testimonials .testimonials-sadrzaj .slide-control div{
+	height: 15px;
+	width: 15px;
+	background-color: #ffffff;
+	border-radius: 50%;
+	border: 1px solid #febd01;
+	display: inline-block;
+	margin:10px 6px;
+	cursor: pointer;
+}
+.testimonials .testimonials-sadrzaj .slide-control div.aktivan{
+	background-color: #febd01;
+
+}
+.blogs{
+	padding: 100px 15px;
+	background-color: #ffffff;
+}
+.blogs .blogs-sadrzaj{
+	
+	flex: 0 0 100%;
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.blogs .blogs-sadrzaj .boks{
+
+flex: 0 0 calc(33.33% - 25px);
+max-width:calc(33.33% - 25px);
+}
+.blogs .blogs-sadrzaj .boks .slika{
+	overflow: hidden;
+}
+.blogs .blogs-sadrzaj .boks .slika img{
+width: 100%;
+display: block;
+transition: all .5s ease;
+}
+.blogs .blogs-sadrzaj .boks:hover .slika img{
+	transform: scale(1.1);
+
+}
+.blogs .blogs-sadrzaj .boks .info {
+	padding: 10px 0;
+}
+.blogs .blogs-sadrzaj .boks .info span{
+	font-size: 12px;
+	color: #838383;
+	display: inline-block;
+}
+.blogs .blogs-sadrzaj .boks .info span:nth-child(2){
+	border-left: 1px solid #dddddd;
+	padding-left: 8px;
+	margin-left: 10px; 
+
+
+}
+.blogs .blogs-sadrzaj .boks h3{
+	font-size: 22px;
+	font-weight: 600;
+	color: #000000;
+	margin: 0 0 10px;
+	padding: 0;
+
+
+}
+.blogs .blogs-sadrzaj .boks p{
+
+    font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	color:#838383;
+	margin:0 0 10px;
+}
+.blogs .blogs-sadrzaj .boks a{
+font-size: 14px;
+color: #febd01;
+text-transform: uppercase;
+font-weight: 600;
+text-decoration: none;
+display: inline-block;
+border-bottom: 2px solid #febd01;
+-webkit-transition: all .5s ease;
+transition: all .5s ease;
+}
+.blogs .blogs-sadrzaj .boks a:hover{
+color: #000000;
+border-color: #000000;
+}
+/*kontakt*/
+.contact-us{
+	padding: 100px 15px;
+	background-color: #f5f8fd;
+}
+.contact-us .contact-form{
+	background-color: #ffffff;
+	flex: 0 0 100%;
+	max-width: 100%;
+	padding: 50px;
+	border: 1px solid #eeeeee;
+	border-radius: 4px;
+}
+.contact-us .contact-form .text{
+	
+	flex: 0 0 100%;
+	max-width: 100%;
+	padding-bottom: 20px;
+}
+.contact-us .contact-form .text h2{
+	font-size: 25px;
+	font-weight: 600;
+	color: #000000;
+	margin:0;
+	padding: 0;
+
+
+}
+.contact-us .contact-form .text p{
+    font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	color:#838383;
+	margin:0px;
+}
+
+.contact-us .contact-form .space-between{
+	justify-content: space-between;
+}
+.contact-us .contact-form  .col-6{
+	
+	flex: 0 0 calc(50% - 15px);
+	max-width: calc(50% - 15px);
+}
+.contact-us .contact-form  .col-12{
+	
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+.contact-us .contact-form .form-control{
+	height: 45px;
+	width: 100%;
+	margin-bottom: 15px;
+	
+	padding:6px 12px;
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Poppins', sans-serif;
+}
+
+.contact-us .contact-form textarea.form-control{
+	height: 120px;
+}
+.contact-us .contact-form .form-control::placeholder{
+	color:#838383;
+}
+.contact-us .contact-form  .dugmecv{
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+.contact-us .contact-form  .dugmecv a{
+    border-radius: 4px;
+	color:#ffffff;
+	padding:12px 25px;
+	text-decoration: none;
+	display:inline-block;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 600;
+	transition: all .5s ease;
+	background-color: #febd01;
+	box-shadow: 0px 10px 15px #e8e8e8;
+	border: none;
+	}
+.contact-us .contact-form  .dugmecv a:hover{
+	background-color: #000000;
+	color:#ffffff;
+}
+/*footer*/
+footer{
+	padding: 70px 15px;
+	background-color: #0c0c17;
+}
+footer .logo{
+	flex: 0 0 100%;
+	max-width: 100%;
+	text-align: center;
+	font-size: 45px;
+	color: #ffffff;
+	font-weight: 700;
+}
+footer .social{
+	flex: 0 0 100%;
+	max-width: 100%;
+	text-align:center;
+	color: #eeeeee;
+	padding-top: 15px;
+}
+footer .social a{
+	color: #999999;
+	text-decoration: none;
+	display: inline-block;
+	margin: 0px 12px;
+	transition: .5s all ease;
+
+}
+footer .social a:hover{
+	color: #ffffff;
+}
+/*copy*/
+.copyright{
+background-color: #0c0c17;
+border-top: 1px solid #1d1d27;
+padding:15px;
+}
+.copyright p{
+	color: #838383;
+	margin: 0;
+	text-align: center;
+	font-weight: 400;
+	font-size: 14px;
+}
+.ham-burger .fa{
+	font-size: 20px;
+	height: 30px;
+	width: 35px;
+	background-color: #ffffff;
+	color: #000000;
+	border-radius: 3px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	display: none;
+	border: 1px solid #eeeeee;
+
+}
+
+/*responisve*/
+@media(max-width: 991px){
+	/*if windows lenght less than 991 or equial then*/
+	.pocetna .pocetna-sadrzaj .blok h1{
+		font-size: 50px;
+
+	}
+}
+@media(max-width: 767px){
+
+	.pocetna .pocetna-sadrzaj .blok h1{
+		font-size:40px;
+	}
+	.pocetna .pocetna-sadrzaj .blok h3{
+		font-size: 25px;
+}
+header{
+		padding: 15px;
+		position: fixed;
+		background-color: #ffffff;
+		border:none;
+		border-bottom: 1px solid #eeeeee;
+		
+}
+header .ime a{
+	color: #000000;
+}
+.ham-burger .fa{
+		display: inline-block;
+        left:0px;
+ }
+.navigacija{
+    	position: absolute;
+    	background-color: #ffffff;
+    	width: 100%;
+    	left:0px;
+    	top: 60px;
+    	padding: 15px;
+    	border-top: 1px solid #eeeeee;
+    	display: none;
+    	border-bottom: 1px solid #eeeeee;
+    	
+    }
+    .navigacija.show{
+    	display: block;
+    }
+    header .navigacija ul li{
+    	display: block;
+    	margin-left: 0;
+
+    }
+    header .navigacija ul li a{
+    	line-height: 42px;
+    	color: #000000;
+    }
+     header .navigacija ul li a::before{
+     	background-color: #febd01;
+     }
+     .oMeni .sadrzaj .tekst{
+	
+	flex: 0 0 100%;
+	max-width: 100%;
+	padding-left: 0px;
+	padding-top: 30px;
+}
+.oMeni .sadrzaj .slika{
+	flex: 0 0 100%;
+	max-width: 100%;
+
+}
+.Usluge .usluge-sadrzaj .boks{
+	background-color: #ffffff;
+	padding: 30px;
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+.vestine .vestine-sadrzaj {
+	flex: 0 0 100%;
+	max-width: 100%;
+	padding-right: 0px;
+}
+.vestine .slika {
+    flex: 0 0 100%;
+	max-width: 100%;
+    
+}
+.portfolio .porfolio-galerija .item{
+	flex: 0 0 50%;
+	max-width: 50%;
+	position: relative;
+	padding: 8px;
+}
+.message-text .text{
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+.message-text .dugmecv {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: left;
+    padding-top:20px;
+}
+.blogs .blogs-sadrzaj .boks{
+	flex: 0 0 100%;
+	max-width: 100%;
+	margin-bottom: 40px 20px;
+}
+.contact-us .contact-form {
+	padding: 20px;
+}
+.contact-us .contact-form .col-6{
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+}
+@media(max-width: 500px){
+	.pocetna .pocetna-sadrzaj .blok h1{
+		font-size:30px;
+	}
+	.pocetna .pocetna-sadrzaj .blok h3{
+		font-size: 20px;
+	}
+	.pocetna .pocetna-sadrzaj .blok{
+		padding-left: 20px;
+	}
+	.portfolio .porfolio-galerija .item{
+	flex: 0 0 100%;
+	max-width: 100%;
+	
+}
+.oMeni .sadrzaj .tekst .informacije .lista p{
+	flex: 0 0 100%;
+	}
+	.testimonials .testimonials-sadrzaj .test-slider{
+		text-align:center;
+	}
+	.testimonials .testimonials-sadrzaj .test-slider .slide .slika{
+		flex: 0 0 100%;
+		max-width: 100%;
+
+
+	}
+	.testimonials .testimonials-sadrzaj .test-slider .slide{
+		flex-wrap: wrap;
+	}
+
+}
+button {
+	border-radius: 4px;
+	border:1px solid #ffffff;
+	
+	padding:12px 25px;
+	text-decoration: none;
+	display:inline-block;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 600;
+	transition: all .5s ease;
+	background-color: transparent;
+	cursor: pointer;
+}
+button a{
+	color: #000000;
+}
+#paragraf{
+	color:white;
+	 margin-left: 300px;
+}
+#sekcija{
+	color:white;
+	 margin-left: 300px;
+}
+	
+
